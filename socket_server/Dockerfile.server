@@ -1,0 +1,16 @@
+FROM maven:3.8.1-openjdk-11-slim AS builder
+COPY pom.xml .
+
+RUN mvn dependency:go-offline
+
+COPY src ./src
+
+RUN mvn package -DskipTests
+
+FROM openjdk:11-jdk
+
+COPY --from=builder target/socket_server-1.0-SNAPSHOT.jar /app/socket_server-1.0-SNAPSHOT.jar
+
+EXPOSE 9876
+
+CMD ["java", "-jar", "/app/socket_server-1.0-SNAPSHOT.jar"]
