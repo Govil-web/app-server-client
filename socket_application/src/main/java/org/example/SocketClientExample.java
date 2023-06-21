@@ -8,7 +8,7 @@ import java.net.Socket;
 public class SocketClientExample {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
-        String host = "server"; // Dirección del servidor
+        String host = "localhost"; // Dirección del servidor
         Socket socket = null; // Socket para la comunicación
         ObjectOutputStream oos = null; // Stream de salida de objetos
         ObjectInputStream ois = null; // Stream de entrada de objetos
