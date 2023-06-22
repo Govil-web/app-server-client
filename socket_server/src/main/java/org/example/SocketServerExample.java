@@ -15,7 +15,7 @@ public class SocketServerExample {
 
         // Bucle para esperar solicitudes de clientes
         while (true) {
-            System.out.println("Waiting for the client request");
+            System.out.println("Esperando respuesta del cliente");
 
             // Aceptar una conexión entrante del cliente
             Socket socket = server.accept();
@@ -26,13 +26,13 @@ public class SocketServerExample {
             // Leer el mensaje enviado por el cliente
             String message = (String) ois.readObject();
 
-            System.out.println("Message Received: " + message);
+            System.out.println("Mensaje recibido: " + message);
 
             // Obtener el stream de salida de objetos del socket
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
 
             // Enviar una respuesta al cliente
-            oos.writeObject("Hi Client " + message);
+            oos.writeObject("Hola desde el servidor " + message);
 
             // Cerrar los streams y el socket
             ois.close();
@@ -44,7 +44,7 @@ public class SocketServerExample {
                 break;
         }
 
-        System.out.println("Shutting down Socket server!!");
+        System.out.println("Cerrando Socket server!!");
         server.close();
     }
 
