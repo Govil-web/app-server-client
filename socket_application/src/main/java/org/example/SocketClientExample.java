@@ -21,13 +21,13 @@ public class SocketClientExample {
             // Obtener el stream de salida de objetos del socket
             oos = new ObjectOutputStream(socket.getOutputStream());
 
-            System.out.println("Sending request to Socket Server");
+            System.out.println("Enviando respuesta al server");
 
             // Enviar una solicitud al servidor
             if (i == 4) {
                 oos.writeObject("exit");
             } else {
-                oos.writeObject("" + i);
+                oos.writeObject("Respuesta " + i);
             }
 
             // Obtener el stream de entrada de objetos del socket
@@ -36,7 +36,7 @@ public class SocketClientExample {
             // Leer la respuesta del servidor
             String message = (String) ois.readObject();
 
-            System.out.println("Message: " + message);
+            System.out.println("Mensaje: " + message);
 
             // Cerrar los streams y el socket
             ois.close();
