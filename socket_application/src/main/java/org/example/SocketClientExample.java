@@ -21,7 +21,7 @@ public class SocketClientExample {
             // Obtener el stream de salida de objetos del socket
             oos = new ObjectOutputStream(socket.getOutputStream());
 
-            System.out.println("Enviando respuesta al server");
+            System.out.println("Enviando respuesta al servidor");
 
             // Enviar una solicitud al servidor
             if (i == 4) {
