@@ -4,6 +4,7 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins/jenkins_home/caches/git-5b6569db92122d374718471bc6925cf9" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins/jenkins_home/workspace/MS-Server-Client-Application-JOB" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jenkins/jenkins_home/workspace/dockerhub" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jenkins/jenkins_home/workspace/socket-application-pipe" vcs="Git" />
   </component>
 </project>
