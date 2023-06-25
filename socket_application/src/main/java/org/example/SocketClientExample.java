@@ -27,7 +27,7 @@ public class SocketClientExample {
             if (i == 4) {
                 oos.writeObject("exit");
             } else {
-                oos.writeObject("Respuesta " + i);
+                oos.writeObject("Respuesta del cliente" + i);
             }
 
             // Obtener el stream de entrada de objetos del socket

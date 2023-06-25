@@ -15,7 +15,7 @@ public class SocketServerExample {
 
         // Bucle para esperar solicitudes de clientes
         while (true) {
-            System.out.println("Esperando respuesta del cliente");
+            System.out.println("Esperando respuesta del cliente desde el servidor: ");
 
             // Aceptar una conexión entrante del cliente
             Socket socket = server.accept();
