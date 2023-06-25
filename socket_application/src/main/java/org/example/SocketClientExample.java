@@ -36,7 +36,7 @@ public class SocketClientExample {
             // Leer la respuesta del servidor
             String message = (String) ois.readObject();
 
-            System.out.println("Mensaje: " + message);
+            System.out.println("Mensaje desde el cliente: " + message);
 
             // Cerrar los streams y el socket
             ois.close();
